@@ -5,7 +5,6 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
-    "download:schema": "npx apollo client:download-schema graphql/schema.gql --endpoint https://api.spacex.land/graphql",
     "gt": "graphql-codegen --config src/codegen.yml",
     "lint": "next lint",
     "start": "next start"
@@ -13,8 +12,8 @@
   "dependencies": {
     "@apollo/client": "latest",
     "@vercel/examples-ui": "latest",
-    "msw": "^0.42.3",
     "graphql": "^15.8.0",
+    "msw": "^0.42.3",
     "msw-introspection": "latest",
     "next": "latest",
     "react": "latest",
@@ -31,5 +30,10 @@
     "eslint": "latest",
     "typescript": "latest",
     "use-query-rd": "latest"
+  },
+  "packageManager": "npm@8.5.5",
+  "engines": {
+    "node": ">=14.0.0 || >=16.0.0 || >=18.0.0",
+    "npm": ">=8.0.0"
   }
 }
