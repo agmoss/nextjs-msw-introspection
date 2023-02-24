@@ -4,14 +4,20 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "dev": "next dev",
+    "dev": "next dev -p 3001",
     "gt": "graphql-codegen --config src/codegen.yml",
     "lint": "next lint",
     "start": "next start"
   },
   "dependencies": {
     "@apollo/client": "latest",
-    "@vercel/examples-ui": "latest",
+    "@emotion/cache": "latest",
+    "@emotion/react": "latest",
+    "@emotion/server": "latest",
+    "@emotion/styled": "latest",
+    "@mui/icons-material": "latest",
+    "@mui/material": "latest",
+    "@ngneat/falso": "latest",
     "graphql": "^15.8.0",
     "msw": "^0.42.3",
     "msw-introspection": "latest",

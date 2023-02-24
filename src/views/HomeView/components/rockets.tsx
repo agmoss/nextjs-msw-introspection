@@ -1,7 +1,7 @@
 import React from "react";
 import { gql } from "@apollo/client";
 import { useQueryRd, match } from "use-query-rd";
-import { Launch } from "./graphql/types";
+import { Launch } from "../../../graphql/types";
 
 const ROCKETS_QUERY = gql`
   query rockets($limit: Int!) {
@@ -19,7 +19,7 @@ const ROCKETS_QUERY = gql`
 export const Rockets = () =>
   match(
     useQueryRd<{ launchesPast: Launch[] }>(ROCKETS_QUERY, {
-      variables: { limit: 10 },
+      variables: { limit: 100 },
     })._rd,
     {
       _: () => <p>Loading...</p>,
@@ -28,16 +28,7 @@ export const Rockets = () =>
         return (
           <>
             <p>Data</p>
-            {data.launchesPast.map((d, i) => {
-              return (
-                <div key={i}>
-                  <p
-                    data-testid={`launchSiteName${i}`}
-                  >{`Launch Site: ${d.launch_site?.site_name_long}`}</p>
-                  <p>{`Rocket Name: ${d.rocket?.rocket_name}`}</p>
-                </div>
-              );
-            })}
+            {JSON.stringify(data)}
           </>
         );
       },

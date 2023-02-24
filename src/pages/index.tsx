@@ -1,16 +1,8 @@
-import { Layout, Page, Text } from '@vercel/examples-ui'
-import { Rockets } from '../rockets'
+import {HomeView} from '../views/HomeView';
 
-export default function Index() {
+const _Index = (): JSX.Element => {
+  return <HomeView />;
+};
 
-  return (
-    <Page>
-      <Text variant="h1" className="mb-6">
-        msw-introspection
-      </Text>
-      <Rockets/>
-    </Page>
-  )
-}
+export default _Index;
 
-Index.Layout = Layout
