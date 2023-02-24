@@ -1,8 +1,8 @@
-import {HomeView} from '../views/HomeView';
+import React from 'react'
+import { HomeView } from '../views/HomeView';
 
 const _Index = (): JSX.Element => {
   return <HomeView />;
 };
 
 export default _Index;
-

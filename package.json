@@ -7,7 +7,10 @@
     "dev": "next dev -p 3001",
     "gt": "graphql-codegen --config src/codegen.yml",
     "lint": "next lint",
-    "start": "next start"
+    "start": "next start",
+    "fix:prettier": "prettier './src/**/*.{tsx,ts}' --write",
+    "fix:eslint": "eslint ./src --fix",
+    "fix": "run-s fix:*"
   },
   "dependencies": {
     "@apollo/client": "latest",
@@ -32,8 +35,13 @@
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
+    "@typescript-eslint/eslint-plugin": "latest",
     "cross-fetch": "latest",
     "eslint": "latest",
+    "eslint-config-next": "latest",
+    "npm-run-all": "latest",
+    "prettier": "latest",
+    "prettier-eslint": "latest",
     "typescript": "latest",
     "use-query-rd": "latest"
   },

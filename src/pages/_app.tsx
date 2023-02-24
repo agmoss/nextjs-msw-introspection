@@ -1,14 +1,15 @@
-import { ApolloProvider } from "@apollo/client";
+import React from "react"
+import { ApolloProvider } from '@apollo/client';
 import type { AppProps } from 'next/app';
 import { CacheProvider, EmotionCache } from '@emotion/react';
 import { ThemeProvider, CssBaseline } from '@mui/material';
 
-import { client } from "../ApolloClient";
-import {createEmotionCache} from '../util/createEmotionCache';
-import {theme} from '../theme/theme';
+import { client } from '../ApolloClient';
+import { createEmotionCache } from '../util/createEmotionCache';
+import { theme } from '../theme/theme';
 
-if (process.env.NEXT_PUBLIC_API_MOCKING === "enabled") {
-  require("../mocks");
+if (process.env.NEXT_PUBLIC_API_MOCKING === 'enabled') {
+  require('../mocks');
 }
 
 interface _AppProps extends AppProps {
@@ -25,7 +26,7 @@ const _App: React.FunctionComponent<_AppProps> = (props) => {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <ApolloProvider client={client}>
-        <Component {...pageProps} />
+          <Component {...pageProps} />
         </ApolloProvider>
       </ThemeProvider>
     </CacheProvider>

@@ -1,22 +1,22 @@
 import React from 'react';
 
-import {Main} from '../../layouts/main';
-import {Section} from '../../components/organisms/Section';
-import {withLayout} from '../../layouts/main/withLayout';
-import { Rockets } from './components/rockets';
-import { Multiple } from './components/multiple-rockets';
+import { Main } from '../../layouts/main';
+import { Section } from '../../components/organisms/Section';
+import { withLayout } from '../../layouts/main/withLayout';
+import { UseQueryRdExample } from './components/use-query-rd-example';
+import { Map2Example } from './components/map2-example';
 
 const _HomeView = (): JSX.Element => {
   return (
     <>
       <Section>
-        <Rockets/>
+        <UseQueryRdExample />
       </Section>
       <Section>
-        <Multiple/>
+        <Map2Example />
       </Section>
     </>
   );
 };
 
-export const HomeView =  withLayout({ Layout: Main })(_HomeView);
+export const HomeView = withLayout({ Layout: Main })(_HomeView);

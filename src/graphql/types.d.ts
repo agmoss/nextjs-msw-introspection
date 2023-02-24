@@ -1,8 +1,14 @@
 export type Maybe<T> = T | undefined | null;
 export type InputMaybe<T> = T | undefined | null;
-export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
-export type MakeOptional<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]?: Maybe<T[SubKey]> };
-export type MakeMaybe<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]: Maybe<T[SubKey]> };
+export type Exact<T extends { [key: string]: unknown }> = {
+  [K in keyof T]: T[K];
+};
+export type MakeOptional<T, K extends keyof T> = Omit<T, K> & {
+  [SubKey in K]?: Maybe<T[SubKey]>;
+};
+export type MakeMaybe<T, K extends keyof T> = Omit<T, K> & {
+  [SubKey in K]: Maybe<T[SubKey]>;
+};
 /** All built-in and custom scalars, mapped to their actual values */
 export type Scalars = {
   ID: string;
@@ -455,17 +461,14 @@ export type Mutation = {
   readonly update_users?: Maybe<Users_Mutation_Response>;
 };
 
-
 export type MutationDelete_UsersArgs = {
   where: Users_Bool_Exp;
 };
-
 
 export type MutationInsert_UsersArgs = {
   objects: ReadonlyArray<Users_Insert_Input>;
   on_conflict?: InputMaybe<Users_On_Conflict>;
 };
-
 
 export type MutationUpdate_UsersArgs = {
   _set?: InputMaybe<Users_Set_Input>;
@@ -580,11 +583,9 @@ export type Query = {
   readonly users_by_pk?: Maybe<Users>;
 };
 
-
 export type QueryCapsuleArgs = {
   id: Scalars['ID'];
 };
-
 
 export type QueryCapsulesArgs = {
   find?: InputMaybe<CapsulesFind>;
@@ -594,7 +595,6 @@ export type QueryCapsulesArgs = {
   sort?: InputMaybe<Scalars['String']>;
 };
 
-
 export type QueryCapsulesPastArgs = {
   find?: InputMaybe<CapsulesFind>;
   limit?: InputMaybe<Scalars['Int']>;
@@ -602,7 +602,6 @@ export type QueryCapsulesPastArgs = {
   order?: InputMaybe<Scalars['String']>;
   sort?: InputMaybe<Scalars['String']>;
 };
-
 
 export type QueryCapsulesUpcomingArgs = {
   find?: InputMaybe<CapsulesFind>;
@@ -612,11 +611,9 @@ export type QueryCapsulesUpcomingArgs = {
   sort?: InputMaybe<Scalars['String']>;
 };
 
-
 export type QueryCoreArgs = {
   id: Scalars['ID'];
 };
-
 
 export type QueryCoresArgs = {
   find?: InputMaybe<CoresFind>;
@@ -626,7 +623,6 @@ export type QueryCoresArgs = {
   sort?: InputMaybe<Scalars['String']>;
 };
 
-
 export type QueryCoresPastArgs = {
   find?: InputMaybe<CoresFind>;
   limit?: InputMaybe<Scalars['Int']>;
@@ -634,7 +630,6 @@ export type QueryCoresPastArgs = {
   order?: InputMaybe<Scalars['String']>;
   sort?: InputMaybe<Scalars['String']>;
 };
-
 
 export type QueryCoresUpcomingArgs = {
   find?: InputMaybe<CoresFind>;
@@ -644,17 +639,14 @@ export type QueryCoresUpcomingArgs = {
   sort?: InputMaybe<Scalars['String']>;
 };
 
-
 export type QueryDragonArgs = {
   id: Scalars['ID'];
 };
-
 
 export type QueryDragonsArgs = {
   limit?: InputMaybe<Scalars['Int']>;
   offset?: InputMaybe<Scalars['Int']>;
 };
-
 
 export type QueryHistoriesArgs = {
   find?: InputMaybe<HistoryFind>;
@@ -664,7 +656,6 @@ export type QueryHistoriesArgs = {
   sort?: InputMaybe<Scalars['String']>;
 };
 
-
 export type QueryHistoriesResultArgs = {
   find?: InputMaybe<HistoryFind>;
   limit?: InputMaybe<Scalars['Int']>;
@@ -673,37 +664,30 @@ export type QueryHistoriesResultArgs = {
   sort?: InputMaybe<Scalars['String']>;
 };
 
-
 export type QueryHistoryArgs = {
   id: Scalars['ID'];
 };
 
-
 export type QueryLandpadArgs = {
   id: Scalars['ID'];
 };
-
 
 export type QueryLandpadsArgs = {
   limit?: InputMaybe<Scalars['Int']>;
   offset?: InputMaybe<Scalars['Int']>;
 };
 
-
 export type QueryLaunchArgs = {
   id: Scalars['ID'];
 };
-
 
 export type QueryLaunchLatestArgs = {
   offset?: InputMaybe<Scalars['Int']>;
 };
 
-
 export type QueryLaunchNextArgs = {
   offset?: InputMaybe<Scalars['Int']>;
 };
-
 
 export type QueryLaunchesArgs = {
   find?: InputMaybe<LaunchFind>;
@@ -713,7 +697,6 @@ export type QueryLaunchesArgs = {
   sort?: InputMaybe<Scalars['String']>;
 };
 
-
 export type QueryLaunchesPastArgs = {
   find?: InputMaybe<LaunchFind>;
   limit?: InputMaybe<Scalars['Int']>;
@@ -721,7 +704,6 @@ export type QueryLaunchesPastArgs = {
   order?: InputMaybe<Scalars['String']>;
   sort?: InputMaybe<Scalars['String']>;
 };
-
 
 export type QueryLaunchesPastResultArgs = {
   find?: InputMaybe<LaunchFind>;
@@ -731,7 +713,6 @@ export type QueryLaunchesPastResultArgs = {
   sort?: InputMaybe<Scalars['String']>;
 };
 
-
 export type QueryLaunchesUpcomingArgs = {
   find?: InputMaybe<LaunchFind>;
   limit?: InputMaybe<Scalars['Int']>;
@@ -740,22 +721,18 @@ export type QueryLaunchesUpcomingArgs = {
   sort?: InputMaybe<Scalars['String']>;
 };
 
-
 export type QueryLaunchpadArgs = {
   id: Scalars['ID'];
 };
-
 
 export type QueryLaunchpadsArgs = {
   limit?: InputMaybe<Scalars['Int']>;
   offset?: InputMaybe<Scalars['Int']>;
 };
 
-
 export type QueryMissionArgs = {
   id: Scalars['ID'];
 };
-
 
 export type QueryMissionsArgs = {
   find?: InputMaybe<MissionsFind>;
@@ -763,18 +740,15 @@ export type QueryMissionsArgs = {
   offset?: InputMaybe<Scalars['Int']>;
 };
 
-
 export type QueryMissionsResultArgs = {
   find?: InputMaybe<MissionsFind>;
   limit?: InputMaybe<Scalars['Int']>;
   offset?: InputMaybe<Scalars['Int']>;
 };
 
-
 export type QueryPayloadArgs = {
   id: Scalars['ID'];
 };
-
 
 export type QueryPayloadsArgs = {
   find?: InputMaybe<PayloadsFind>;
@@ -784,28 +758,23 @@ export type QueryPayloadsArgs = {
   sort?: InputMaybe<Scalars['String']>;
 };
 
-
 export type QueryRocketArgs = {
   id: Scalars['ID'];
 };
-
 
 export type QueryRocketsArgs = {
   limit?: InputMaybe<Scalars['Int']>;
   offset?: InputMaybe<Scalars['Int']>;
 };
 
-
 export type QueryRocketsResultArgs = {
   limit?: InputMaybe<Scalars['Int']>;
   offset?: InputMaybe<Scalars['Int']>;
 };
 
-
 export type QueryShipArgs = {
   id: Scalars['ID'];
 };
-
 
 export type QueryShipsArgs = {
   find?: InputMaybe<ShipsFind>;
@@ -815,7 +784,6 @@ export type QueryShipsArgs = {
   sort?: InputMaybe<Scalars['String']>;
 };
 
-
 export type QueryShipsResultArgs = {
   find?: InputMaybe<ShipsFind>;
   limit?: InputMaybe<Scalars['Int']>;
@@ -823,7 +791,6 @@ export type QueryShipsResultArgs = {
   order?: InputMaybe<Scalars['String']>;
   sort?: InputMaybe<Scalars['String']>;
 };
-
 
 export type QueryUsersArgs = {
   distinct_on?: InputMaybe<ReadonlyArray<Users_Select_Column>>;
@@ -833,7 +800,6 @@ export type QueryUsersArgs = {
   where?: InputMaybe<Users_Bool_Exp>;
 };
 
-
 export type QueryUsers_AggregateArgs = {
   distinct_on?: InputMaybe<ReadonlyArray<Users_Select_Column>>;
   limit?: InputMaybe<Scalars['Int']>;
@@ -841,7 +807,6 @@ export type QueryUsers_AggregateArgs = {
   order_by?: InputMaybe<ReadonlyArray<Users_Order_By>>;
   where?: InputMaybe<Users_Bool_Exp>;
 };
-
 
 export type QueryUsers_By_PkArgs = {
   id: Scalars['uuid'];
@@ -1069,7 +1034,6 @@ export type Subscription = {
   readonly users_by_pk?: Maybe<Users>;
 };
 
-
 export type SubscriptionUsersArgs = {
   distinct_on?: InputMaybe<ReadonlyArray<Users_Select_Column>>;
   limit?: InputMaybe<Scalars['Int']>;
@@ -1078,7 +1042,6 @@ export type SubscriptionUsersArgs = {
   where?: InputMaybe<Users_Bool_Exp>;
 };
 
-
 export type SubscriptionUsers_AggregateArgs = {
   distinct_on?: InputMaybe<ReadonlyArray<Users_Select_Column>>;
   limit?: InputMaybe<Scalars['Int']>;
@@ -1086,7 +1049,6 @@ export type SubscriptionUsers_AggregateArgs = {
   order_by?: InputMaybe<ReadonlyArray<Users_Order_By>>;
   where?: InputMaybe<Users_Bool_Exp>;
 };
-
 
 export type SubscriptionUsers_By_PkArgs = {
   id: Scalars['uuid'];
@@ -1103,7 +1065,7 @@ export enum Conflict_Action {
   /** ignore the insert on this row */
   Ignore = 'ignore',
   /** update the row with the given values */
-  Update = 'update'
+  Update = 'update',
 }
 
 /** column ordering options */
@@ -1119,7 +1081,7 @@ export enum Order_By {
   /** in the descending order, nulls first */
   DescNullsFirst = 'desc_nulls_first',
   /** in the descending order, nulls last */
-  DescNullsLast = 'desc_nulls_last'
+  DescNullsLast = 'desc_nulls_last',
 }
 
 /** expression to compare columns of type timestamptz. All fields are combined with logical 'AND'. */
@@ -1160,7 +1122,6 @@ export type Users_Aggregate_Fields = {
   readonly min?: Maybe<Users_Min_Fields>;
 };
 
-
 /** aggregate fields of "users" */
 export type Users_Aggregate_FieldsCountArgs = {
   columns?: InputMaybe<ReadonlyArray<Users_Select_Column>>;
@@ -1199,7 +1160,7 @@ export enum Users_Constraint {
   Or = 'or',
   Primary = 'primary',
   Unique = 'unique',
-  UsersPkey = 'users_pkey'
+  UsersPkey = 'users_pkey',
 }
 
 /** input type for inserting data into table "users" */
@@ -1282,7 +1243,7 @@ export enum Users_Select_Column {
   Name = 'name',
   Rocket = 'rocket',
   Timestamp = 'timestamp',
-  Twitter = 'twitter'
+  Twitter = 'twitter',
 }
 
 /** input type for updating data in table "users" */
@@ -1301,7 +1262,7 @@ export enum Users_Update_Column {
   Name = 'name',
   Rocket = 'rocket',
   Timestamp = 'timestamp',
-  Twitter = 'twitter'
+  Twitter = 'twitter',
 }
 
 /** expression to compare columns of type uuid. All fields are combined with logical 'AND'. */
