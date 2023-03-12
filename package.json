@@ -26,7 +26,8 @@
     "msw-introspection": "latest",
     "next": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "use-query-rd": "2.0.3"
   },
   "devDependencies": {
     "@graphql-codegen/cli": "^2.13.11",
@@ -42,8 +43,7 @@
     "npm-run-all": "latest",
     "prettier": "latest",
     "prettier-eslint": "latest",
-    "typescript": "latest",
-    "use-query-rd": "latest"
+    "typescript": "latest"
   },
   "packageManager": "npm@8.5.5",
   "engines": {

@@ -1,9 +1,8 @@
-import { match, useQueryRd } from 'use-query-rd';
+import { match, useQueryRd, map2 } from 'use-query-rd';
 import React from 'react';
 import { gql } from '@apollo/client';
 
 import { Launch, Launchpad } from '../../../graphql/types';
-import { map2 } from '../../../_rd';
 
 const ROCKETS_QUERY = gql`
   query rockets($limit: Int!) {

@@ -3,7 +3,7 @@ if (typeof window === 'undefined') {
   //   s.server.listen()
   // })
 } else {
-  console.log('asdf');
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
   const { worker } = require('./browser');
   worker.start();
 }
